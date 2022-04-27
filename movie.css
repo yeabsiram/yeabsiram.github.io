@@ -1,75 +1,150 @@
-.banner{
-    background-image: url("./images/movie/bannerbg.png");
-    background-size: 100%;
-    background-repeat:repeat-x;
-    align-items: center;
-
-}
-.ban{
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   width: 50%;
-}
-#title{
-    font-size: 24pt;
-    font-weight: bold;
-    font-family: tahoma, verdana, sans-serif;
-    text-shadow: 3px 3px #999999;
-    text-align: center;
-}
-table{
- 
-    
-}
-td{
-    border: 1px solid black;
-}
-
-.container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    width: 800px;
-    border: #999999;
-    border-radius: 5%;
-    border-style: groove;
-    border-color: #999999;
-    content: inherit;
-}
-.one{
-    grid-column: 1;
-    width: 550px;
-    grid-row: 1;
-    background-image: url("./images/movie/bannerbg.png");
-    background-repeat: repeat-x;
-   
-}
-.two{
-    grid-column: 2;
-    grid-row: 1;
-    border-top-right-radius: 5%;
-    content: inherit;
-}
-.three
+body 
 {
-    grid-column: 1;
-    grid-row: 2/3;
+    
+    background-image: url("images/background.png");
+	font-family: Verdana, Tahoma, sans-seri;
+	font-size: 8pt;	
+	margin:0;
+    padding:0;
 }
-#rcorners2 {
-    border-radius: 25px;
-    border: 2px solid #73AD21;
-    padding: 20px;
-    width: 200px;
-    height: 150px;
-  }
 
-.cont {
-    width: 300px;
-    display: flex;
-    align-items: center;
+#Banner
+{	  
+    background-image: url("images/bannerbg.png");
+	text-align:center;	
 }
-.cont img{
-    width: 50px;
-    margin-right: 20px;
+
+#MovieNameYear
+{
+	font-size: 24pt;
+	font-weight: bold;
+	text-align: center;
+    font-family: Tahoma, Verdana, sans-serif;
+    text-shadow: 3px 3px #999999;
+}
+
+#ContentBox
+{
+	margin-left: auto;
+    margin-right: auto;
+	width: 800px;
+	border: 4px solid grey;
+	border-radius: 20px;
+	position: relative;	
+	overflow: hidden;
+}
+
+#Overview
+{
+    width: 250px;
+    float: right;
+    background-color: #A2B964;
+}
+
+#TextMain
+{
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    padding-top: 0px;
+	font-size: 8pt;
+}
+
+#CommentsSection
+{
+    width:550px;
+    position:relative;
+    float:left;
+}
+
+.BoldList
+{
+	font-weight: bold;
+    padding-top:5px;
+}
+
+
+#Rotten33
+{
+    background-image:url("/images/rbg.png");
+    font-size: 48pt;
+    color: red;
+    font-weight: bold;
+    height: 83px;
+    vertical-align: bottom;
+	
+}
+
+#Rotten33 img
+{
+    float: left;
+    margin-right: 5px;
+}
+
+.ReviewColumn
+{
+    width: 47%;
+    float: left;
+    margin-left: 2%;
+}
+
+.Review
+{
+    font-size: 8pt;
+    background-color: #E8DC9B;
+    font-weight: bold;
+    border: 2px solid grey;
+    border-radius: 10px;
+    padding: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.ReviewerInfo
+{
+    padding-top: 5px;
+    padding-bottom: 20px;    
+}
+
+.ReviewerInfo span
+{
+    font-style: italic;
+}
+
+#ReviewCounts
+{
+    background-color:#A2B964;
+    padding:5px;
+    position: absolute;
+	bottom: -87px;
+	width: 550px;
+	text-align: center;
+	
+}
+
+p img
+{ 
+	padding-right: 5px;
+	float: left;
+	
+}
+
+#ValidatorHTMLCSS
+{
+    position: fixed;
+    right:0;
+    bottom:0;
+}
+
+.Validator
+{
+    opacity: 0.5;
+}
+
+li
+{
+	list-style-type: none;
+}
+p q
+{
+    color: black;
 }
