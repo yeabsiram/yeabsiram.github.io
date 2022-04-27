@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>grid</title>
+    </head>
+    <style>
+        .container{
+            display: grid;
+            width: 800px;
+            grid-template-columns: 550px 250px;
+            grid-template-rows: 200px 200px 100px;
+
+        }
+        .abc{
+            height:100% ;
+            width: 100%;
+        }
+        /*
+      .section{
+            border: 1px solid black;
+            border-style: double;
+            border-radius: 5%;
+
+        }*/
+        .top-left-image{
+            border-top-left-radius: 10%;
+            height: 50px;
+        }
+        .first-col{
+            background-image: url("./images/movie/bannerbg.png");
+            background-repeat: repeat-x;
+            height: 100px;
+            border-top-left-radius: 1%;
+        }
+        .image-container{
+            object-fit: contain;
+        }
+    </style>
+    <body>
+        <div class="section">
+            <div class="container">
+                <div class="first-col">
+                  <div class="image-container">
+                    <img class="top-left-image"src="./images/movie/rottenbig.png" alt="Rotten" />
+                    33%
+                  </div>
+                        
+                    
+                </div>
+                <div>
+                    
+                        <img class="abc" src="./images/movie/overview.png" alt="general overview" />
+                    
+                </div>
+                <div>
+                    c
+                </div>
+                <div>
+                    D
+                </div>
+                <div>
+                    E
+                </div>
+                <div>
+                    F
+                </div>
+                <div>
+                    G
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
