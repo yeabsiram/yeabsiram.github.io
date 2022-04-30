@@ -89,11 +89,18 @@ function filterLongWord(a, b)
     }
     return c;
 }
+function shortest(a,b,c)
+{
+    var short = a.length < b.length?a:b;
+    short = short.length < c.length? short: c;
+    return short;
+}
 var a = [1,2,3,4];
 var b = "jag testar";
 var bRev = "ratset gaj";
 var longest = ["abc", "ab", "a", "abcd"];
 var longestRet = ["abc", "ab", "abcd"];
+
     
 console.log("Expected output of maxOfThree(5,4,44) is 44  " + myFunctionTest(44, maxOfThree(5, 4, 44)));
 console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(55, maxOfThree(55, 4, 44)));
@@ -137,8 +144,22 @@ const gg = aa.reduce(function(prevValue, elem, i, array){
 
 console.log(gg);
 
+let arr = [2, 3, 5, 7]
 
+arr.map(function(element, index, array){
+	console.log(this.toString()) // 80
+}, 80);
+let arr2 = [2, 3, 5, 7]
 
+arr2.map(function(element, index, array){
+    console.log(element);
+    console.log(index);
+    console.log(array);
+    console.log(this)
+    return element;
+}, 80);
+
+console.log(shortest("abc", "ab", "a"));
 //console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(4, maxOfThree(55, 4, 44)));
     </script>
 </head>

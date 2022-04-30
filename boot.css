@@ -31,3 +31,18 @@
     height: 50px;
     background-color: darkgreen;
 }
+@media (max-width: 800px) {
+    .column1 {
+      flex: 50%;
+      order: 1;
+    }
+    .column3
+    {
+        flex: 50%;
+        order: 2;
+    }
+    .column2{
+        flex: 100%;
+        order: 3;
+    }
+  }

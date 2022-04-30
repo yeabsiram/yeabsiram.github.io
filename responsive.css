@@ -78,11 +78,18 @@ body{
     
 }
 @media (max-width: 600px) {
-    .column1, .column2 {
+    .column1 {
       flex: 50%;
+      order: 1;
     }
-    .column3{
+    .column3
+    {
+        flex: 50%;
+        order: 2;
+    }
+    .column2{
         flex: 100%;
+        order: 3;
     }
   }
 
