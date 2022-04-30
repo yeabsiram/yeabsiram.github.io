@@ -1,6 +1,6 @@
 window.onload = function(){
     "use strict";
-    
+}
 let intervalAnim;
 var textArea;
 
@@ -44,14 +44,19 @@ function animationSelector()
 
 function animate(a, b)
 {
-    
+      let speed = document.getElementById("turbo").checked;
+      let animSpeed = 250;
+      if(speed)
+      {
+            animSpeed = 50;
+      }
       var i = 0;
       intervalAnim =  setInterval(function(){
           let val = a[i];
           i = (i + 1) % a.length;
           
           b.value = val;
-      }, 250);
+      }, animSpeed);
 
 }
 function fontSelector()
@@ -86,4 +91,4 @@ function fontSelector()
 }
 
 
-}
+
