@@ -13,13 +13,13 @@
         <textarea id="text-area" cols="80" rows="20"></textarea>
         <fieldset>
             <legend>Play Controls:</legend>
-            <button id="start" onclick="start()">Start</button>
-            <button disabled="disabled" onclick="stop()" id="stop">Stop</button>
+            <button id="start">Start</button>
+            <button disabled="disabled"  id="stop">Stop</button>
         </fieldset>
 
         <fieldset>
             <legend>Animation:</legend>
-            <select id="animation" onchange="animationSelector()">
+            <select id="animation" >
                 <option selected="selected" value="Blank">Blank</option>
                 <option value="Exercise">Exercise</option>
                 <option value="Juggler">Juggler</option>
@@ -29,7 +29,7 @@
         </fieldset>
         <fieldset>
             <legend>Size:</legend>
-            <select id="fontsize" onchange="fontSelector()">
+            <select id="fontsize">
                 <option value="Tiny">Tiny</option>                                              
                 <option value="Small">Small</option>                        
                 <option value="Medium" selected="selected">Medium</option>                                           
