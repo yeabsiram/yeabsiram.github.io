@@ -57,8 +57,12 @@ window.onload = function(){
     };
     
     document.getElementById("turbo").onchange = function(){
-        stop();
-        start();
+        if(intervalAnim)
+        {
+            stop();
+            start();
+        }
+        
     };
     document.getElementById("animation").onchange = function(){
         stop();
