@@ -18,6 +18,11 @@ function tester(){
             assert.equal("Thorfinn is now teaching War studies", T.teach("War studies"));
         })
     })
+    describe("teach", function(){
+        it("Sets what a person teaches and returns the same thing", function(){
+            expect(['Cd', 'DD']).to.eql(che(['ab','Cd', 'DD']));
+        })
+    })
     
 }
 
