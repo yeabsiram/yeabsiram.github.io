@@ -2,6 +2,7 @@ $(function(){
 
 
    let inter;
+   
 
     $("#start").click( function(){
         
