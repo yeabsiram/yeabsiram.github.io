@@ -1,16 +1,26 @@
 $(function(){
    var gameStarted = false;
    var isCreated = false;
+   function lost()
+   {
+      $("div.boundary").css("background-color", "red");
+         
+      gameStarted = false;
+      
+      $("#stat").text("You Lost");
+   }
+   $("#maze").mouseleave(function(){
+      if(gameStarted)
+      {
+         lost();
+      }
+   })
    $("div.boundary").mouseenter(function(){
     
       if(gameStarted)
       {
-         $("div.boundary").css("background-color", "red");
-         
-         gameStarted = false;
-         
-         $("#stat").text("You Lost");
         
+        lost();
       }
       
    });
