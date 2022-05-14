@@ -1,0 +1,15 @@
+<!DOCTYPE html> 
+<html lang='en'>
+ <head>
+ <meta charset="utf-8">
+ <title>Current time</title>
+ <% d = new Date();
+    e = d.getHours() >= 6 && d.getHours() < 18?"day.css":"night.css";
+  %>
+ <link href="css/<%= e%>" rel="stylesheet">
+    
+ </head>
+ <body>
+ This page was loaded at <%= time %>
+ </body>
+</html>
