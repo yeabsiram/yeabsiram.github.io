@@ -1,14 +1,25 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const app = express();
 const path = require('path');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+
+const app = express();
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.use('/css', express.static(path.join(__dirname, 'css')));
+app.use(cookieParser());
+app.use(session({
+    secret: 'very_secret',
+    saveUninitialized: true,
+    resave: true,
+
+}))
 //app.use('/static', express.static(path.join(__dirname, '../static')));
 
 
 app.get('/sendFile', (req,res,next)=>{
-    var filename = "index.html";
+   // var filename = "index.html";
     res.sendFile('./static/index.html', {root: __dirname});
 })
 
@@ -57,14 +68,15 @@ res.send(`<!DOCTYPE html>
             </html>` );
 });
 app.post('/result', (req, res, next) =>{
-    if(req.body.name && req.body.age)
-    {
-        res.cookie(req.body.name, req.body.age);
-    }
+    let name = req.body.name;
+    let age = req.body.age;
+    req.session.name = name;
+    req.session.age = age;
     res.redirect('/output');
 });
 app.get('/output', (req, res, next) =>{
-    
-    res.send('Welcome ${req.cookies.name} ${req.cookies.age}');
+  
+
+    res.send(`Welcome ${req.session.name} ${req.session.age}`);
 });
 app.listen(3000);
