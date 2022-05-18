@@ -15,6 +15,7 @@ $(function(){
         let growth = parseInt($("#grw").val());
         let interval = parseInt($("#interval").val());
         let size = parseInt($("#size").val()); 
+        let height = 150;
 
         let theDiv = '<div class="circle-holder"></div>';
         $("div.container").append(theDiv)
@@ -25,7 +26,7 @@ $(function(){
             "position":"absolute",
             "margin-left":w,
             "margin-top": "100px",
-            "height": "150px",
+            "height": height + "px",
             "width": width + "px",
             "background-color": "red",
             "border-radius": "50%",
@@ -40,7 +41,7 @@ $(function(){
             let id = "div.circle" + i;
             $(id).click(function(){
                 $(id).remove();
-                clearInterval(inter);
+                //clearInterval(inter);
             })
         }
         
@@ -79,12 +80,15 @@ $(function(){
 
        
        let g = width;
+       let h = height;
        inter = setInterval(()=>{
             g = g + growth;
+            h = h + growth;
             for(let i = 0; i < size; i++)
             {
                 let c = "div.circle" + i;
                 $(c).css("width", g + "px");
+                $(c).css("height", h + "px");
             }
             
         }, interval);
